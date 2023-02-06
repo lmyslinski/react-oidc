@@ -2,8 +2,8 @@ import { OidcProvider } from '@axa-fr/react-oidc';
 import { useRouter } from 'next/router'
 
 const configuration = {
-  client_id: '452838147726-ja27ntbpa0o38r8stmsqaiohasaog1bg.apps.googleusercontent.com',
-  redirect_uri: 'https://react-oidc-token-error.vercel.app/#authentication/callback',
+  client_id: '452838147726-avih7dhh8ss319agjodp09embk95ojif.apps.googleusercontent.com',
+  redirect_uri: 'https://react-oidc-token-error.vercel.app/authentication/callback',
   scope: 'openid profile email',
   authority: 'https://accounts.google.com/'
 };
