@@ -2,11 +2,10 @@ import { OidcProvider } from '@axa-fr/react-oidc';
 import { useRouter } from 'next/router'
 
 const configuration = {
-  client_id: 'interactive.public.short',
-  redirect_uri: 'http://localhost:3001/#authentication/callback',
-  silent_redirect_uri: 'http://localhost:3001/#authentication/silent-callback', // Optional activate silent-signin that use cookies between OIDC server and client javascript to restore the session
-  scope: 'openid profile email api offline_access',
-  authority: 'https://demo.duendesoftware.com'
+  client_id: '452838147726-ja27ntbpa0o38r8stmsqaiohasaog1bg.apps.googleusercontent.com',
+  redirect_uri: 'https://react-oidc-token-error.vercel.app/#authentication/callback',
+  scope: 'openid profile email',
+  authority: 'https://accounts.google.com/'
 };
 
 const onEvent=(configurationName, eventName, data )=>{
