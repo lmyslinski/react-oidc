@@ -11,7 +11,7 @@ const configuration = {
 export const configurationJumpcloud = {
   client_id: "b04e9bc0-2f43-4777-9bd6-ddf8636e7ac5",
   redirect_uri: "https://react-oidc-token-error.vercel.app/authentication/callback",
-  scope: "openid profile email",
+  scope: "openid profile email offline offline_access",
   authority: "https://oauth.id.jumpcloud.com/",
   authority_configuration: {
     authorization_endpoint: "https://oauth.id.jumpcloud.com/oauth2/auth",
