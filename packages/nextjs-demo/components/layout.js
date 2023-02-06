@@ -8,6 +8,25 @@ const configuration = {
   authority: 'https://accounts.google.com/'
 };
 
+export const configurationJumpcloud = {
+  client_id: "b04e9bc0-2f43-4777-9bd6-ddf8636e7ac5",
+  redirect_uri: "https://react-oidc-token-error.vercel.app/authentication/callback",
+  scope: "openid profile email",
+  authority: "https://oauth.id.jumpcloud.com/",
+  authority_configuration: {
+    authorization_endpoint: "https://oauth.id.jumpcloud.com/oauth2/auth",
+    token_endpoint: "https://oauth.id.jumpcloud.com/oauth2/token",
+    userinfo_endpoint: "https://oauth.id.jumpcloud.com/userinfo",
+    end_session_endpoint:
+      "https://oauth.id.jumpcloud.com/oauth2/sessions/logout",
+    revocation_endpoint:
+      "https://oauth.id.jumpcloud.com/oauth2/sessions/revocation",
+    check_session_iframe:
+      "https://oauth.id.jumpcloud.com/oauth2/sessions/checksession",
+    issuer: "https://oauth.id.jumpcloud.com/",
+  },
+};
+
 const onEvent=(configurationName, eventName, data )=>{
     console.log(`oidc:${configurationName}:${eventName}`, data);
   }
@@ -28,7 +47,7 @@ export default function Layout({ children }) {
     };
   return (
     <>
-    <OidcProvider configuration={configuration} onEvent={onEvent} withCustomHistory={withCustomHistory} >
+    <OidcProvider configuration={configurationJumpcloud} onEvent={onEvent} withCustomHistory={withCustomHistory} >
       <main>{children}</main>
       </OidcProvider>
     </>
